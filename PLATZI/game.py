@@ -16,21 +16,19 @@ while True:
     if(personSelect == None):
         print('Elegiste mal 😥')
     elif(personSelect == computerSelect):
-        print('Empate!')
+        print('Empate!😶😶😶')
     elif ((personSelect == 1 and computerSelect == 3) or (personSelect == 2 and computerSelect == 1) or (personSelect == 3 and computerSelect == 2)):
         person += 1
-        print('Ganaste 🥳')
+        print('Ganaste 🥳🥳🥳')
     else:
         computer += 1
-        print('Perdiste ❌')
+        print('Perdiste ❌❌❌')
 
     if(person > 2):
-        print('Ganaste!!!')
+        print('Ganaste🎈🎈🎈')
         break
     elif (computer > 2):
-        print('Perdiste')
+        print('Perdiste❌❌❌')
         break
     
     print(f'Marcador\nTu: {person} Computadora: {computer}')
-# print(f'Pesona -> {personSelect}')
-# print(f'Computadora -> {computerSelect}')
