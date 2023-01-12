@@ -1,9 +1,32 @@
 import random
+
+options = {'piedra':1,'papel':2,'tijera':3}
 person = 0
 computer = 0
-options = {'piedra':1,'papel':2,'tijera':3}
+round = 1
 
+def printScore():
+    print('*'*20)
+    print(f'Marcador\nTu: {person} Computadora: {computer}')
+
+def printWinner():
+    breakGame = False
+    print('*'*20)
+    if(person > 2):
+        print('Ganaste🎈🎈🎈')
+        breakGame = True
+    elif (computer > 2):
+        print('Perdiste❌❌❌')
+        breakGame = True
+    print(f'Marcador\nTu: {person} Computadora: {computer}')
+    return breakGame
+    
+    
 while True:
+    print('*'*20)
+    print(f'ROUND {round}')
+    print('*'*20)
+    
     inputPerson = input('Seleciona una opción: piedra, papel, tijera\n')
     inputComputer = random.choice(list(options.keys()))
 
@@ -23,12 +46,9 @@ while True:
     else:
         computer += 1
         print('Perdiste ❌❌❌')
-
-    if(person > 2):
-        print('Ganaste🎈🎈🎈')
-        break
-    elif (computer > 2):
-        print('Perdiste❌❌❌')
+    
+    if(printWinner()):
         break
     
-    print(f'Marcador\nTu: {person} Computadora: {computer}')
+    printScore()
+    round +=1
