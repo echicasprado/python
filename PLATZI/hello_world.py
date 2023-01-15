@@ -6,7 +6,7 @@ print("Hello ",name)
 
 print("USO DE f y format, para concatenar variables a mensajes")
 
-message1 = "Hola mundo!"
+message1, message2 = "Hola mundo!"
 
 print ("Mensaje1 -> {0}".format(message1))
 print (f"Bienvenido {message2}")
